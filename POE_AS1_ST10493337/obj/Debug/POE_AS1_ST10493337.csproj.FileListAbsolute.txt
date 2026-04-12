@@ -1,0 +1,7 @@
+C:\Users\sazix\source\repos\POE_AS1_ST10493337\bin\Debug\POE_AS1_ST10493337.exe.config
+C:\Users\sazix\source\repos\POE_AS1_ST10493337\bin\Debug\POE_AS1_ST10493337.exe
+C:\Users\sazix\source\repos\POE_AS1_ST10493337\bin\Debug\POE_AS1_ST10493337.pdb
+C:\Users\sazix\source\repos\POE_AS1_ST10493337\obj\Debug\POE_AS1_ST10493337.csproj.AssemblyReference.cache
+C:\Users\sazix\source\repos\POE_AS1_ST10493337\obj\Debug\POE_AS1_ST10493337.csproj.CoreCompileInputs.cache
+C:\Users\sazix\source\repos\POE_AS1_ST10493337\obj\Debug\POE_AS1_ST10493337.exe
+C:\Users\sazix\source\repos\POE_AS1_ST10493337\obj\Debug\POE_AS1_ST10493337.pdb
