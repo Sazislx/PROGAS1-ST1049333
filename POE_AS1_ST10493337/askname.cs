@@ -7,7 +7,7 @@ namespace POE_AS1_ST10493337
     public class askname
     {//start of class
         public static void TypeMessage(string message)
-        {
+        {//how fast will the message be written by bot
             foreach (char letter in message)
             {
                 Console.Write(letter);
@@ -23,7 +23,7 @@ namespace POE_AS1_ST10493337
             bool validName = false;
 
             while (!validName)
-            {
+            {//start of while loop
                 Console.Write("Before we begin, what is your name? ");
                 userName = Console.ReadLine().Trim();
 
@@ -38,7 +38,7 @@ namespace POE_AS1_ST10493337
                 else
                 {
                     validName = true;
-                }
+                }//end of while loop
             }
 
             TypeMessage("\nWelcome, " + userName + "! I'm your Cybersecurity Awareness Bot.");
