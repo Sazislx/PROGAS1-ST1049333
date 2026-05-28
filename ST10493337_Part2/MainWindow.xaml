@@ -1,0 +1,293 @@
+﻿<Window x:Class="ST10493337_Part2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ST10493337_Part2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+
+    <!--parent grid-->
+    <Grid Background="#F5F0E8">
+
+        <!--logo grid-->
+        <Grid Margin="0,0,-63,-33"
+              x:Name="Logo_grid"
+              Visibility="Visible"
+              Background="#F5F0E8">
+            <Image
+                Source="/Logo.png"
+                Margin="0,-200,0,0"
+                Height="200"
+                Width="300"/>
+            <TextBlock
+                Height="50"
+                Width="300"
+                Margin="0,100,0,0"
+                Text="Welcome to AshBourne ChatBot"
+                TextAlignment="Center"
+                FontSize="16"
+                FontWeight="SemiBold"
+                Foreground="#5C4A32"/>
+            <Button
+                Height="50"
+                Width="300"
+                Content="Start Chatbot"
+                Margin="0,200,0,0"
+                Click="start_ai"
+                Background="#C8A97E"
+                Foreground="#FFFFFF"
+                FontSize="14"
+                FontWeight="SemiBold"
+                BorderThickness="0">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#C8A97E"/>
+                        <Setter Property="Foreground" Value="#FFFFFF"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}"
+                                            CornerRadius="8"
+                                            Padding="10,5">
+                                        <ContentPresenter HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#A0784E"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
+        <!--end of logo grid-->
+
+        <!--start of name grid-->
+        <Grid Visibility="Hidden"
+              x:Name="username_grid"
+              Background="#F5F0E8">
+            <Image
+                Source="/Logo.png"
+                Margin="0,-200,0,0"
+                Height="200"
+                Width="300"/>
+            <TextBlock
+                Width="300"
+                Text="Please Enter Your Name"
+                Margin="0,10,0,0"
+                Height="15"
+                TextAlignment="Center"
+                Foreground="#5C4A32"
+                FontSize="13"
+                FontWeight="SemiBold"/>
+            <TextBox
+                Height="45"
+                Width="300"
+                Margin="0,100,0,0"
+                TextWrapping="Wrap"
+                VerticalScrollBarVisibility="Auto"
+                x:Name="username"
+                Background="#FDF8F2"
+                Foreground="#3B2F1E"
+                BorderBrush="#C8A97E"
+                BorderThickness="1.5"
+                FontSize="14"
+                Padding="8,5"/>
+            <Button
+                Height="50"
+                Width="100"
+                Margin="326,347,306,37"
+                Content="Start Chatbot"
+                Click="Submit_username">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#C8A97E"/>
+                        <Setter Property="Foreground" Value="#FFFFFF"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="FontSize" Value="13"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}"
+                                            CornerRadius="8"
+                                            Padding="10,5">
+                                        <ContentPresenter HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#A0784E"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
+        <!--end of name grid-->
+
+        <Grid x:Name="chatbot_grid"
+              Visibility="Hidden"
+              Background="#F5F0E8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <!-- Logo -->
+                <RowDefinition Height="Auto"/>
+                <!-- Bot response label -->
+                <RowDefinition Height="*"/>
+                <!-- Chat history -->
+                <RowDefinition Height="60"/>
+                <!-- Input row -->
+            </Grid.RowDefinitions>
+
+            <!-- Logo -->
+            <Image
+                Grid.Row="0"
+                Source="/Logo.png"
+                Height="120"
+                Width="350"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
+
+            <!-- Bot response / status label -->
+            <TextBlock
+                x:Name="bot_response"
+                Grid.Row="1"
+                TextAlignment="Center"
+                TextWrapping="Wrap"
+                Margin="20,8,20,8"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="14"
+                Foreground="#5C4A32"
+                FontWeight="SemiBold"/>
+
+            <!-- Chat history -->
+            <ListView
+                x:Name="chat_history_list"
+                Grid.Row="2"
+                Margin="20,0,20,8"
+                Background="#FDF8F2"
+                BorderBrush="#C8A97E"
+                BorderThickness="1"
+                ScrollViewer.VerticalScrollBarVisibility="Auto"
+                ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListView.Resources>
+                    <!-- Row background alternating beige tones -->
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Background" Value="#FDF8F2"/>
+                        <Setter Property="Foreground" Value="#3B2F1E"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="Padding" Value="4"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#E8D9C0"/>
+                                <Setter Property="Foreground" Value="#3B2F1E"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#F0E6D2"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                    <!-- Column header beige style -->
+                    <Style TargetType="GridViewColumnHeader">
+                        <Setter Property="Background" Value="#C8A97E"/>
+                        <Setter Property="Foreground" Value="#FFFFFF"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="FontSize" Value="13"/>
+                        <Setter Property="Padding" Value="8,6"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                    </Style>
+                </ListView.Resources>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Sender" Width="110"
+                                        DisplayMemberBinding="{Binding Sender}"/>
+                        <GridViewColumn Header="Message" Width="420">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock
+                                        Text="{Binding Message}"
+                                        TextWrapping="Wrap"
+                                        MaxWidth="410"
+                                        Foreground="#3B2F1E"
+                                        FontSize="13"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Timestamp" Width="160"
+                                        DisplayMemberBinding="{Binding Timestamp}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <!-- Input row -->
+            <Grid Grid.Row="3" Margin="20,0,20,8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="90"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox
+                    x:Name="user_response"
+                    Grid.Column="0"
+                    Margin="0,0,8,0"
+                    VerticalContentAlignment="Center"
+                    FontSize="14"
+                    Background="#FDF8F2"
+                    Foreground="#3B2F1E"
+                    BorderBrush="#C8A97E"
+                    BorderThickness="1.5"
+                    Padding="8,5"/>
+
+                <Button
+                    Grid.Column="1"
+                    Content="Send"
+                    Click="Submit_response"
+                    VerticalAlignment="Stretch">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#C8A97E"/>
+                            <Setter Property="Foreground" Value="#FFFFFF"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="FontWeight" Value="SemiBold"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}"
+                                                CornerRadius="8"
+                                                Padding="10,5">
+                                            <ContentPresenter HorizontalAlignment="Center"
+                                                              VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#A0784E"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

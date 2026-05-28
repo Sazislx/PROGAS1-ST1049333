@@ -1,0 +1,17 @@
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\ST10493337_Part2.csproj.AssemblyReference.cache
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\MainWindow.g.cs
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\App.g.cs
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\ST10493337_Part2_Content.g.cs
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\ST10493337_Part2_MarkupCompile.cache
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\ST10493337_Part2_MarkupCompile.lref
+C:\Users\Student\source\repos\ST10493337_Part2\bin\Debug\ST10493337_Part2.exe.config
+C:\Users\Student\source\repos\ST10493337_Part2\bin\Debug\ST10493337_Part2.exe
+C:\Users\Student\source\repos\ST10493337_Part2\bin\Debug\ST10493337_Part2.pdb
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\MainWindow.baml
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\ST10493337_Part2.g.resources
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\ST10493337_Part2.Properties.Resources.resources
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\ST10493337_Part2.csproj.GenerateResource.cache
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\ST10493337_Part2.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\ST10493337_Part2.exe
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\ST10493337_Part2.pdb
+C:\Users\Student\source\repos\ST10493337_Part2\obj\Debug\ST10493337_Part2.exe.config
