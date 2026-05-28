@@ -9,13 +9,14 @@ namespace ST10493337_Part2
 {
     public class SoundGreet
     {
+        //Constructure of sound bot
         public SoundGreet()
-{
-    string paths = AppDomain.CurrentDomain.BaseDirectory.Replace(@"\bin\Debug\", @"\greet.wav");
-
-    SoundPlayer greet = new SoundPlayer(paths);
-    greet.Play();
-}
+        {
+            string paths = AppDomain.CurrentDomain.BaseDirectory.Replace(@"\bin\Debug\", @"\greet.wav");
+        
+            SoundPlayer greet = new SoundPlayer(paths);
+            greet.Play();
+        }
 
     }
 }
