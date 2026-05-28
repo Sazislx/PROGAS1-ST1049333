@@ -17,7 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ST10493337_Part2
-{
+{//start of namespace
     public partial class MainWindow : Window
     {
         // Observable collection to store and display chat messages
@@ -379,3 +379,4 @@ namespace ST10493337_Part2
         public string Message { get; set; }
     }
 }
+//end of namespace
