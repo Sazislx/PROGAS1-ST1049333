@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
 
 
-    <!--parent grid-->
+    <!---parent grid--->
     <Grid Background="#F5F0E8">
 
         <!--logo grid-->
