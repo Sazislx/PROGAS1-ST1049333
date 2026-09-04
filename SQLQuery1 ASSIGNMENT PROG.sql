@@ -66,7 +66,7 @@ INSERT INTO Event (EventName, EventDate, Location, OrganiserID) VALUES
 ('Comrades Marathon', '2027-06-13', 'Pietermaritzburg', 1),
 ('Cape Town Cycle Tour', '2027-03-08', 'Cape Town', 2),
 ('Soweto Marathon', '2027-11-07', 'Soweto', 1);
- 
+ --add on catagory
 INSERT INTO Category (CategoryName, DistanceKm, EventID) VALUES
 ('Full Marathon', 89.00, 1),
 ('Ultra Marathon', 56.00, 1),
