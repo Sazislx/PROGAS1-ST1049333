@@ -61,11 +61,13 @@ INSERT INTO Organiser (Name, Email, Organisation) VALUES
 INSERT INTO Participant (Name, Email, DOB) VALUES
 ('Thabo Mokoena', 'thabo.m@gmail.com', '1995-03-14'),
 ('Sarah Johnson', 'sarah.j@gmail.com', '1990-07-22');
- 
+
+ --add on event
 INSERT INTO Event (EventName, EventDate, Location, OrganiserID) VALUES
 ('Comrades Marathon', '2027-06-13', 'Pietermaritzburg', 1),
 ('Cape Town Cycle Tour', '2027-03-08', 'Cape Town', 2),
 ('Soweto Marathon', '2027-11-07', 'Soweto', 1);
+
  --add on catagory
 INSERT INTO Category (CategoryName, DistanceKm, EventID) VALUES
 ('Full Marathon', 89.00, 1),
