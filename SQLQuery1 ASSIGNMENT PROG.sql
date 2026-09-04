@@ -53,7 +53,7 @@ CREATE TABLE Result (
     CONSTRAINT FK_Result_Entry FOREIGN KEY (EntryID) REFERENCES Entry(EntryID)
 );
 
-
+--add on organiser
 INSERT INTO Organiser (Name, Email, Organisation) VALUES
 ('Lindiwe Khumalo', 'lindiwe@comrades.co.za', 'Comrades Marathon Association'),
 ('Pieter van Wyk', 'pieter@capetowncycle.co.za', 'Cape Town Cycle Tour');
